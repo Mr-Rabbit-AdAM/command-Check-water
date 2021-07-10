@@ -33,7 +33,7 @@ read -p " You can check what you need : " bash
 if [[ $bash == 1 ]];then
 clear
 neofetch
-command -v php || echo -e "\e[1;31m no install php"
+command -v php >/dev/null && echo "ok" || echo -e "\e[1;31m no install php"
 sleep 4
 bash pyae.sh
 fi
